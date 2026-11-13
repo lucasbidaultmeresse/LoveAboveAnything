@@ -388,4 +388,4 @@ document.addEventListener('click', function(e) {
         }, 14000); // 8 secondes d'attente
     
     }
-});
+}); 
