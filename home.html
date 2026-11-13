@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome my love</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-accueil" id="corps-page">
+
+    <!-- ÉCRAN D'ACCUEIL (Visible au chargement) -->
+    <div id="section-accueil" class="vue-conteneur">
+        <a id="btn-entrer" href="#" class="gros-bouton">Want to see a surprise ?</a>
+
+        <!-- Images d'oies flottantes -->
+        <img src="Images/oie_oie_trim_image.png" class="oie-flottante" alt="oie">
+        <img src="Images/oie_jpg.png" class="oie-flottante" alt="oie">
+        <img src="Images/oie_oie_oie_trim_image.png" class="oie-flottante" alt="oie">
+        <img src="Images/oie_1_jpg.png" class="oie-flottante" alt="oie">
+        <img src="Images/oie_2_jpg.png" class="oie-flottante" alt="oie">
+    </div>
+
+    <!-- PAGE PRINCIPALE (Cachée au début) -->
+    <div id="section-principale" class="vue-section cache">
+        <div class="conteneur-amour" id="contenu-principal">
+            <h1 class="titre-principal">Here's all the ways I want to express love to you Fabi</h1>
+            
+            <!-- C'est ici que les langues apparaissent -->
+            <div id="liste-langues" class="grille-langues"></div>
+
+            <nav style="margin-top: 40px;">
+                <a href="#" id="next" class="gros-bouton cache" style="font-size: 1.1rem; padding: 12px 25px;">Next</a>
+            </nav>
+        </div>
+
+        <!-- Conteneur pour la suite -->
+        <div id="section-suivante" class="conteneur-amour cache">
+            <!-- Étape 1 : Visible immédiatement au clic sur Next -->
+            <h1 class="titre-principal">6 months of pure hapiness with you, I feel complete by your sides Fabi</h1>
+            
+            <!-- Étape 2 : Apparaît après 3 secondes -->
+            <div id="bloc-cache-3s" style="opacity: 0; transition: opacity 1s ease;">
+                <h1 id="titre-principal2" class="titre-principal">Now, one last little surprise !</h1>
+            </div>
+
+            <!-- Étape 3 : Apparaît encore après (ex: à 6 secondes) -->
+            <div id="bloc-cache-6s" style="opacity: 0; transition: opacity 1s ease; margin-top: 20px;">
+                <h1 style="color: #ffb3c6; font-size: 2.3rem; font-family: 'Times New Roman', Times, serif;">I suggest you to go see your mom for the last gifts.</h1>
+                <p style="color: #ffb3c6; font-size: 2.3rem; font-family: 'Times New Roman', Times, serif; margin-top: 20px;">Have fun mon bébé d'amour, te amo muitooooooooooo ❤️❤️❤️❤️</p>
+            </div>
+        </div>
+
+    <!-- Audio persistant -->
+    <audio id="musique-fond" preload="auto" loop>
+        <source src="Musique/Zezé Di Camargo Luciano É o Amor Ao Vivo.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="animation.js"></script>
+</body>
+</html>
