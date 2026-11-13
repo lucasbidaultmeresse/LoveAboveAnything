@@ -10,6 +10,13 @@
 
     <!-- ÉCRAN D'ACCUEIL (Visible au chargement) -->
     <div id="section-accueil" class="vue-conteneur">
+
+        <!-- Vidéo d'arrière-plan pour la première page -->
+        <video autoplay muted loop playsinline class="video-arriere-plan">
+            <source src="Videos/Design sans titre.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas la lecture de vidéos.
+        </video>
+
         <a id="btn-entrer" href="#" class="gros-bouton">Want to see a surprise ?</a>
 
         <!-- Images d'oies flottantes -->
@@ -56,5 +63,8 @@
     </audio>
 
     <script src="animation.js"></script>
+
+    <div id="voile-noir" class="cache"></div>
+    
 </body>
 </html>

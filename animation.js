@@ -320,7 +320,7 @@ function lancerApparitionLangues() {
                 }, 800); 
             }
 
-        }, index * 2600); // Ton délai actuel entre chaque langue
+        }, index * 1800); // Ton délai actuel entre chaque langue
     });
 }
 
@@ -366,5 +366,26 @@ document.addEventListener('click', function(e) {
             }, 6000); // 6 secondes (soit 3 sec après le titre)
 
         }, 600); // Attend la fin du fondu sortant
+
+        // Après 8 secondes d'affichage du dernier texte :
+        setTimeout(() => {
+            const voile = document.getElementById('voile-noir');
+            if (voile) {
+                voile.classList.remove('cache');
+                
+                // Laisse le navigateur souffler puis lance le fondu noir
+                requestAnimationFrame(() => {
+                    requestAnimationFrame(() => {
+                        voile.classList.add('fondu-actif');
+                    });
+                });
+
+                // Une fois le fondu noir terminé (ex: après 2.5 secondes de transition), on revient à l'index
+                setTimeout(() => {
+                    location.reload(); // Recharge la page et ramène l'utilisateur à l'accueil proprement
+                }, 2500); 
+            }
+        }, 14000); // 8 secondes d'attente
+    
     }
 });

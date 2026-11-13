@@ -185,3 +185,35 @@ body {
     }
 }
 
+/* Style de la vidéo d'arrière-plan de l'accueil */
+.video-arriere-plan {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Permet à la vidéo de remplir tout l'écran sans se déformer */
+    z-index: -1; /* Place la vidéo derrière le contenu textuel et les boutons */
+    pointer-events: none; /* Empêche la vidéo de bloquer les clics de souris */
+}
+
+
+#voile-noir {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000000;
+    z-index: 9999; /* Toujours au-dessus de tout le reste */
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 2s ease; /* Durée du fondu noir (ici 2 secondes) */
+}
+
+/* Quand il n'est plus en .cache et qu'on active la transition */
+#voile-noir.fondu-actif {
+    opacity: 1;
+    pointer-events: auto;
+}
+
